@@ -9,6 +9,8 @@ To solve the lunar lander problem using function approximation with ANN, I adopt
 ### DQN implementation
 The full algorithm is shown below, the ANN is constructed using the tensorflow.keras library:
 
+![DQN implementation](DQN.png "DQN implementation")
+
 
 
 
