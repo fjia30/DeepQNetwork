@@ -12,6 +12,14 @@ The full algorithm is shown below, the ANN is constructed using the tensorflow.k
 ![DQN implementation](DQN.png "DQN implementation")
 
 
+### *CartPole-v0*
+Parameters for ANN and learning can be found in `cartpole.ipynb`.
+The performance of the DQN gradually increased during training as shown below.
+![cartpole training progress](cartpole_progress.gif "cartpole training progress")
+
+The trained DQN was able to balance cartpole indefinitely. 
+![cartpole trained](cartpole_trained.gif "cartpole trained")
+
 
 
 ### References
