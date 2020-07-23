@@ -7,6 +7,10 @@ from collections import deque
 import random
 import copy
 
+# this class implenments learning with DQN featuring memmory replay and double Q network
+# requires an OpenAI gym enviroment as a parameter
+# requires user to define the inner layers of the ANN before training
+# support loading pre-trained weights for perfomance analysis
 class DQN():
 
     def __init__(self, env, epsilon, epsilon_decay, epsilon_cutoff, alpha, gamma, numEpisodes, stepSize, batchSize, weight_file, memorySize, startMemSize, numMaxStep=1000, numEpoch=1):

@@ -8,19 +8,42 @@ To solve the lunar lander problem using function approximation with ANN, I adopt
 
 ### DQN implementation
 The full algorithm is shown below, the ANN is constructed using the tensorflow.keras library:
-
 ![DQN implementation](DQN.png "DQN implementation")
 
-
 ### *CartPole-v0*
-Parameters for ANN and learning can be found in `cartpole.ipynb`.
+Parameters for ANN and learning can be found in `cartpole.ipynb`. We used a ANN with 2 hidden layers, with 16 and 8 nodes each.
 The performance of the DQN gradually increased during training as shown below.
-![cartpole training progress](cartpole_progress.gif "cartpole training progress")
+
+![cartpole training progress](cartpole_progress.png "cartpole training progress")
 
 The trained DQN was able to balance cartpole indefinitely. 
 ![cartpole trained](cartpole_trained.gif "cartpole trained")
 
+### *LunarLander-v2*
+Parameters for ANN and learning can be found in `lunarlander.ipynb`. We used a ANN with 3 hidden layers due to a significantly larger state-action space compared to cartpole, with 128, 64 and 32 nodes each.
+The performance of the DQN gradually increased during training as shown below.
 
+![lunarlander training progress](lunarlander_progress.png "lunarlander training progress")
+
+The trained DQN was able to solve the lunarlander problem. Below is a comparsion before and after training.
+##### Before
+
+![lunarlander untrained](lunarlander_untrained.gif "untrained")
+
+##### After
+
+![lunarlander trained](lunarlander_trained.gif "trained")
+
+Next I tried to simply the ANN used in lunarlander. I first tried to remove a layer from my ANN, the simplified ANN performed slightly worse but was still able to solve the problem. Next I tried to reduce the number of nodes in each layer. I was able to reduce the number of nodes to 32 and 16. The resulting ANN performed significantly poorer and was barely able to solve the problem, further simplification of the ANN was not successful. The result of 100 runs for each of the three trained ANNs are shown below. It is very clear that the representation power of the ANN is positively associated with the performance of the trained model.
+
+Neuronet|Structure|# parameters|Legend Color
+------|---------|------------|-------------
+ANN#1|256, 128, 128|52228|Blue
+ANN#2|256, 128	35716|Orange
+ANN#3|32, 16|884|Green
+
+![comparasion#1](ANN_comparasion1.png)
+![comparasion#2](ANN_comparasion2.png)
 
 ### References
 1. https://gym.openai.com/
