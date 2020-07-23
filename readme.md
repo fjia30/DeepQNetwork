@@ -7,7 +7,7 @@ DQN addresses the instability problem with two approaches. Firstly, it uses “e
 To solve the lunar lander problem using function approximation with ANN, I adopted the DQN method. Additionally, instead of taking state, action as input and outputting the corresponding Q value, my ANN took state variables as an input and output action values for all actions, an approach that was also used in the DQN paper. This allows one to compute Q values for all possible actions in a given state with only a single forward pass through the network [4]. The model is updated based on the bellman equation [3]: Q[s(t),a]=r+γ * maxQ[s(t+1),a] where Q[s(terminal),a]=0 for all a.
 
 ### DQN implementation
-The full algorithm is shown below, the ANN is constructed using the tensorflow.keras library:
+The full algorithm is shown below, the ANN is constructed using the tensorflow.keras library. The python code can be found in `DQN.py.`
 ![DQN implementation](DQN.png "DQN implementation")
 
 ### *CartPole-v0*
