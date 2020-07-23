@@ -39,7 +39,7 @@ Next I tried to simply the ANN used in lunarlander. I first tried to remove a la
 Neuronet|Structure|# parameters|Legend Color
 ------|---------|------------|-------------
 ANN#1|256, 128, 128|52228|Blue
-ANN#2|256, 128	35716|Orange
+ANN#2|256, 128|35716|Orange
 ANN#3|32, 16|884|Green
 
 ![comparasion#1](ANN_comparasion1.png)
